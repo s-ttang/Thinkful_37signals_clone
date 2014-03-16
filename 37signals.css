@@ -1,0 +1,381 @@
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a{background:0 0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+/* CSS file for 37signals clone */ 
+@font-face{
+			font-family:CrimsonSemibold;
+			src: url('Crimson Text 600.ttf');	
+}
+@font-face{
+			font-family:CrimsonRoman;
+			src: url('Crimson Text regular.ttf');	
+}
+@font-face{
+			font-family:CrimsonTextItalic;
+			src: url('Crimson Text italic.ttf');	
+}
+@font-face{
+			font-family:CrimsonSemiboldItalic;
+			src: url('Crimson Text 600italic.ttf');	
+}
+
+/*--- Global styles ---*/
+.float-left{
+	float: left;
+}
+.float-right{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+
+p{
+	font: 12px/27px Lucida Grande, Verdana, sans-serif;
+	text-align: center;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+	li{
+		display: inline;
+	}
+a{
+	font: 12px/27px Lucida Grande, Verdana, sans-serif;
+	text-decoration: none;
+	color: #369;
+}
+a:hover{
+	color: #57ABFF;
+}
+hr{
+	height: 12px;
+	margin: 9px 0;
+	border: 0;
+	color: transparent;
+	background: #fff url('http://37signals.com/images/img-hr.png') no-repeat scroll 50% 50%;
+}
+
+h1{
+	font: 58px/58px CrimsonSemibold, Georgia, serif;
+	margin: 0;
+}	
+h2{
+	font: 48px/1.1em CrimsonSemibold, Georgia, serif;
+	font-weight: 500;
+	letter-spacing: -2px;
+	color: #222;
+	margin: 30px auto;
+}
+h3{
+
+}
+h4{
+	font: bold 14px/27px Lucida Grande, Verdana, sans-serif;
+	margin: 0;
+	color: #c00;
+}
+h5{
+	font: 20px/27px CrimsonSemibold, Georgia, serif;
+}	
+wrapper{
+	margin: 0 auto;
+}
+
+
+/*--- Main Styles ---*/
+html, body{
+	height: 100%;
+  	margin:  0;	
+  	padding: 0;
+  	border:  0;
+}
+
+#container{
+	position:	relative;
+	margin: 	0 auto;	
+	min-width: 	1120px; 
+}
+
+header{
+	height: 27px;
+	margin: 20px 40px 30px 40px;
+}
+		nav .date p{
+			margin: 0;
+			color: #999;
+		}
+			nav li{
+				padding: 0 10px;
+			}		
+				nav #sign-in{	
+					color: #57ABFF;
+				}
+				nav #sign-in:hover{
+					color: #369;
+				}
+#content{
+	width: 820px;
+	margin: 0 auto;
+	padding-bottom: 60px;
+	text-align: center;
+}
+	.logo-container{
+		height: 43px;
+		margin-bottom: 10px;
+	}
+	.headers{
+		height: 163px;
+		margin: 0 0 20px 0;
+		color:  #222;
+	}
+		.headers p, .app-container p{
+			font:  bold 14px/27px Lucida Grande, Verdana, sans-serif;
+			margin: 15px 0;
+			color: #222;
+			font-weight: normal;
+			line-height: 1.4em;
+		}
+		
+		.headers h2{
+			margin: 0;
+		}
+			div.default-head h1{
+				margin-bottom: 20px;
+				letter-spacing: -2px;
+			}
+			div.default-head h5{
+				letter-spacing: 0px;
+			}
+			
+			.basecamp-head{
+				display: none;
+			}
+			.highrise-head{
+				display: none;
+			}
+			.campfire-head{
+				display: none;
+			}
+		img.left-arrow{
+			display: none;
+			position: absolute;
+			margin: 10px 0 0 -20px;
+		}
+		img.right-arrow{
+			display: none;
+			position: absolute;
+			margin: 10px -20px 0 0;
+		}
+		
+.app-container{
+	margin: 0 0 40px 0;
+}
+		a.button{
+			width:   160px;			
+			height:  217px;
+			display: inline-block;
+			margin:  10px 20px 5px 0;
+			padding: 20px 10px 10px 10px;
+		}
+		.gradient{
+			border: 1px solid #e8e8e8;
+			border-radius: 5px;
+			background-color: #EFEFEF;
+			background:	 -webkit-linear-gradient(top right, rgb(255, 255, 255), rgb(239, 239, 239)) repeat scroll 0% 0% transparent;
+			background: 	-moz-linear-gradient(top right, rgb(255, 255, 255), rgb(239, 239, 239)) repeat scroll 0% 0% transparent;
+			background: 	 -ms-linear-gradient(top right, rgb(255, 255, 255), rgb(239, 239, 239)) repeat scroll 0% 0% transparent;
+			-webkit-box-shadow: 0 0 5px #EFEFEF;
+			   -moz-box-shadow: 0 0 5px #EFEFEF;
+				    box-shadow: 0 0 5px #EFEFEF;
+		}
+				a.button p{
+					margin: 5px 0;
+				}
+				a.button .app-name{
+					font-size: 21px;
+					font-weight: bold;
+				}
+				article.products .app-name{
+					text-decoration: none;
+					color: #222;
+				}
+				article.products a:hover{
+				}
+				article p.tagline-2{
+					font-size: 11px;
+					line-height: 1.2em;
+					color: #666;
+				}
+				a.button sup{
+					font-size: 11px;
+					vertical-align: super;
+					color: #222;
+					opacity: 0.5;
+					line-height: 1.5em;
+				}
+				.Highrise{
+					margin-left: 20px;
+				}
+				.Campfire{
+					margin-right: 0;
+					margin-left: 20px;
+				}
+				
+span.app-name{
+		text-decoration: underline;
+		margin: 0;
+		color: #369;
+}
+
+
+article{
+	margin-bottom: 40px;
+	margin-top:    10px;
+	padding-left:   15px;
+}
+	article em{
+		font: 48px/1.1em CrimsonSemiboldItalic, Georgia, serif;
+	}
+	article .meet{
+		position: absolute;
+		width:  143px;  height: 117px;
+		margin: 50px 0 0 -125px;
+	}
+		.meet .thumbnail{
+			display: inline-block;
+			width:  143px; 	
+			height: 104px;
+			background: url('http://37signals.com/images/img-customers.png') no-repeat scroll 50% 50%;
+			background-position: 0 0;		
+		}
+		.meet .thumbnail:hover{
+			background-position: 0 -104px;
+		}
+		.meet .arrow{
+			position: absolute;
+			left: 120px;
+			top:   65px;
+		}
+		.meet p{
+			margin: 0;
+			height: 10px;
+		}
+			.meet p a{
+				font-size:10px;
+			}
+			.meet p a:hover{
+				text-decoration: underline;
+			}
+article .customers p{
+	font: 22px/1.3em CrimsonRoman, Georgia, serif;
+	color: #888;
+	text-align: left;
+}
+		.customers .companies{
+			margin-bottom:  10px;
+		}
+article .quotes-wrapper{
+		padding: 5px 0 40px 0;
+}
+		.quote{
+			margin: 35px 0 10px 0;
+			font: 22px/1.3em CrimsonTextItalic, Georgia, serif;
+			color: #888;
+		}
+		.quote-author{
+			font: 12px/1.5em Lucida Grande, Verdana, sans-serif;
+			color: #222;
+		}
+		
+article.manifesto{
+	height: 500px;
+}
+	div.column{
+		width: 380px;
+		margin: 0 40px 0 0;
+	}
+	div.end{
+		margin-right: 0;
+	}
+		div.belief{
+			margin: 20px 0;
+			text-align: left;
+		}
+		div.belief h1{
+			float: left;
+			margin: -10px 15px 0 0;
+			padding-left: 5px;
+			font-size:   58px;
+			line-height: 63px;
+			color: #ccc;
+			vertical-align: top;
+		}
+		div.belief h3{
+			margin: 5px 0 5px 45px;
+			font-size:   16px;
+			line-height: 1.4em;
+		}
+		div.belief p{
+			margin: 5px 0 5px 45px;
+			text-align: left;
+			line-height: 1.4em;
+		}
+		div.belief a{
+			line-height: 1.4em;
+		}
+		div.top{
+			margin-top: 0;
+		}
+		div.bottom{
+			margin-bottom: 0;
+		}
+article.more-links{
+	padding: 0;
+}
+	.more-links li{
+		display: list-item;
+		padding: 5px 0;
+	}
+
+article.products{
+	text-align: center;
+}
+article.products div.column{
+	width: 300px;
+	margin: 0 30px 30px 0;
+			
+}
+	.products end{
+		margin-right: 0;
+	}
+	
+	.products div h2{
+		margin: 12px 0;
+		font-size: 22px;
+		line-height: 27px;
+		font-weight: bold;
+		letter-spacing: 0px;
+	}
+	.products h4{
+		border-bottom: 1px solid #e8e8e8;
+	}
+	.products p{
+		color: #666;
+		margin: 0;
+	}
+	
+footer{
+	margin: 50px 0 10px 0;
+}
+		footer ul li{
+			padding: 2px;
+		}
+			footer li a, footer li p{
+				font-size: 10px;
+			}
+			footer li p{
+				display: inline;
+				color: #999;
+			}
